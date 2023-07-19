@@ -3,10 +3,10 @@ let head= document.getElementById("url");
 let name= document.getElementById("name");
 let year= document.getElementById("year");
 let button= document.getElementById("button");
- 
+
 button.addEventListener('click', addEvent);
 
-function addEvent(callback){
+function addEvent(callback) {
 	callback.preventDefault();
 	if(name.value == "" && year.value != ""){
 		head.innerHTML = `https://localhost:8080/?year=${year.value}`
@@ -14,10 +14,10 @@ function addEvent(callback){
 	else if(name.value != "" && year.value == ""){
 		head.innerHTML = `https://localhost:8080/?name=${name.value}`
 	}
-		else if(name.value== "" && year.value== ""){
+	else if(name.value== "" && year.value== ""){
 		head.innerHTML = `https://localhost:8080/?name=${name.value}&year=${year.value}`
 	}
-	else(){
+	else {
 		head.innerHTML = `https://localhost:8080/`
 	}
 }
