@@ -14,7 +14,7 @@ function addEvent(callback) {
 	else if(name.value != "" && year.value == ""){
 		head.innerHTML = `https://localhost:8080/?name=${name.value}`
 	}
-	else if(name.value== "" && year.value== ""){
+	else if(name.value != "" && year.value != ""){
 		head.innerHTML = `https://localhost:8080/?name=${name.value}&year=${year.value}`
 	}
 	else {
